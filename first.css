@@ -1,0 +1,50 @@
+
+		.nav
+		{
+			height: 50px;
+			width: 100%;
+			background-color: lightblue;
+		}
+		.menu
+		{
+			height: 60px;
+			width: 10%;
+			position: relative;
+			top: 10px;
+		}
+		.main_body
+		{
+			height: 800px;
+			width: 100%;
+			background-color: lightyellow;
+		}
+		.portfolio
+		{
+			font-size: 50px;
+			 text-shadow: 2px 3px 5px;
+		}
+		.para_div
+		{
+			height: 500px;
+			width: 50%;
+			display: inline;
+			float: left;
+		}
+		.para
+		{
+			position: relative;
+			top: 50px;
+		}
+		.pic_div
+		{
+			height: 400px;
+			width: 40%;
+			display: inline;
+			float: right;
+		}
+		.footer
+		{
+			height: 80px;
+			width: 100%;
+			background-color: grey;
+		}

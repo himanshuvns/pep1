@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function grade(a)
+		{
+			if(a>=81&&a<100)
+			{
+				return "A+ grade";
+			}else if(a>=76&&a<=80)
+			{
+				return "A grade";
+		}else if(a>=71&&a<=75)
+			{
+				return "B+ grade";
+		}else if(a>=60&&a<=70)
+			{
+				return "B grade";
+		}else if(a<=60&&a>=0)
+			{
+				return "C grade";
+		}else if(a>100||a<0)
+			{
+				return "invalid case";
+		}
+	}
+		var a=parseInt(prompt("enter the marks of the student"));
+		console.log(typeof a)
+		var b=grade(a);
+		document.write(b);
+	</script>
+
+</body>
+</html>

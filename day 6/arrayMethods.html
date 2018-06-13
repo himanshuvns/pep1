@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrayMethods</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//find function=always return a value
+		var arr=[20,52,84,3,6,]
+		var a= arr.find(function(value)
+		{
+			return value
+		})
+		document.write(a+'<br>');
+
+		//filter function=always return an array
+		var words=['spary','limit','elite','himanshu']
+		var b=words.filter(function(value)
+		{
+			return value.length>2;
+		})
+		document.write(b+'<br>');
+
+		//element has value
+		var words=['spary','limit','elite','himanshu']
+		var c=words.filter(function(value)
+		{
+			return value.includes('e');
+		})
+		document.write(c+'<br>');
+
+		//reduce function=
+		/*var array1=[1.2.3.4]
+		 reducer=array1.reduce(function(acuumulator,currentValue)
+		{
+			return acuumulator * currentValue
+		})
+		document.write(reducer)*/
+
+		//factorial using reduce function
+
+		var num=4;
+		var numArray=[]
+		for(var i=2;i<=num;i++)
+		{
+			numArray.push(i);
+		}
+		var fact=numArray.reduce(function(a,v)
+		{
+			return a*v;
+		})
+		console.log(fact)
+
+		//map function
+		var arr2=[1,2,3,4,5]
+		var map=arr2.map(function(element)
+		{
+			return element-1;
+		})
+		document.write(map);
+	</script>
+
+</body>
+</html>

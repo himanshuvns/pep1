@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class in object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(name,age,eyecolor,walk)   //object prototype
+		{
+			this.name=name
+			this.age=age
+			this.eyecolor=eyecolor
+			this.walk=walk
+			this.changeName=function(newName)
+			{
+				this.name=newName
+			}
+		}
+		var father = new Person("himanshu",25,"red",function()   //objects
+		{
+			return 'father walks'
+		}),
+		 mother = new Person("shekhar",35,"blue",function()    //objects
+		{
+			return 'mother walks'
+		})
+		console.log(mother)
+		console.log(mother.walk())
+		console.log(father.name)
+		//mother.nationality="indian"
+		//console.log(mother.nationality)       
+		mother['nationality']="indian"
+		console.log(mother.nationality)
+		mother.changeName("baba")
+		console.log(mother)
+
+		//properties of objects
+
+		//console.log(mother.hasOwnProperty('eyecolor'))
+		//console.log(mother.hasOwnProperty('subject'))
+		//mother.subject="english"
+		//console.log(mother.subject)
+
+		if(mother.hasOwnProperty('subject'))
+		{
+			console.log("no addition")
+		}
+		else
+		{
+			mother.subject="english"
+			console.log(mother.subject)
+		}
+
+		//making function find and add property
+		function propertyFindAndAdd(object,property,value)
+		{
+			if(object.hasOwnProperty(property))
+			{
+				return object[property]
+			}
+			else
+			{
+				if(value){ object[property]=value }
+				return value
+			}
+		}
+		var a=propertyFindAndAdd(mother,"city")
+		console.log(a)
+
+
+		//object keys
+		console.log(Object.keys(mother))
+		for(var x in mother)
+		{
+			console.log(mother[x])
+		}
+		/*for(var x of mother)
+		{
+			console.log(mother[x])
+		}*/
+
+		console.log(Object.values(mother))
+
+		//instance of
+
+		console.log(mother instanceof Person)
+	</script>
+
+</body>
+</html>

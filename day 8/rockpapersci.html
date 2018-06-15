@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rock paper scissor</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var choice=['rock','paper','scissor']
+		var a=prompt("enter your choice among rock,paper and scissor");
+		if(a=="rock"||a=="paper"||a=="scissor")
+		{
+		
+		}
+		else
+		{
+			var d="wrong"
+			document.write("wrong choice<br>");
+		}
+		
+		var b=Math.floor((Math.random()*3));
+		var c=choice[b];
+		if(d)
+		{
+
+		}
+		else
+		{
+		document.write("computer choice= "+c+"<br>");
+		}
+		if(a===c)
+		{
+			document.write("draw")
+		}
+		else if(a=="rock"&&c=="paper")
+		{
+			document.write("computer wins");
+		}
+		else if(a=="scissor"&&c=="paper")
+		{
+			document.write("user wins");
+		}
+		else if(a=="paper"&&c=="rock")
+		{
+			document.write("user wins");
+		}
+		else if(a=="paper"&&c=="scissor")
+		{
+			document.write("computer wins");
+		}
+		else if(a=="rock"&&c=="scissor")
+		{
+			document.write("user wins");
+		}
+		else if(a=="scissor"&&c=="rock")
+		{
+			document.write("computer wins");
+		}
+	</script>
+</body>
+</html>

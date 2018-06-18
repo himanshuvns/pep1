@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.nav
+		{
+			height: 60px;
+			width: 100%;
+			background-color: grey;
+			box-shadow: 2px 3px;
+		}
+		.title
+		{
+			height: 60px;
+			width: 30%;
+			background-color: grey;
+			position: absolute;
+			left: 20px;
+		}
+		.login
+		{
+			height: 60px;
+			width: 15%;
+			background-color: grey;
+			float: right;
+			display: inline;
+			position: absolute;
+			left: 950px;
+			top: 0px;
+		}
+		.signup
+		{
+			height: 60px;
+			width: 15%;
+			background-color: grey;
+			float: right;
+			display: inline;
+			position: absolute;
+			left: 1150px;
+			top: 0px;
+		}
+		h5
+		{
+			color: yellow;
+    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		}
+		.body
+		{
+			height: 600px;
+			width: 100%;
+			background-color: lightgreen;
+		}
+		.main_form
+		{
+			height: 255px;
+			width: 60%;
+			background-color: #ffbf00;
+			position: absolute;
+			top: 100px;
+			left: 290px;
+			box-shadow: 2px 2px 2px 2px grey;
+			border-radius: 3px;
+		}
+		.footer
+		{
+			height: 25px;
+			background-color: black;
+			color: white;
+			font-family: monospace;
+		}
+		.result
+		{
+			height: 280px;
+			width: 60%;
+			background-color: lightblue;
+			position: absolute;
+			top: 370px;
+			left: 290px;
+			box-shadow: 2px 2px 2px 2px grey;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="title">
+			<h1 style="color: white;font-family: monospace;position: absolute;top: -10px;left: 10px;">Student Information</h1>
+		</div>
+		<div class="login">
+			<button type="button" class="btn btn-primary" style="position: absolute;top: 13px;left: 120px;box-shadow: 1px 1px;"><b>Login</b></button>
+		</div>
+		<div class="signup">
+			<button type="button" class="btn btn-primary" style="position: absolute;top: 13px;left:0px;box-shadow: 1px 1px;"><b>Signup</b></button>
+		</div>
+	</div>
+	<div class="body">
+		<center>
+			<div class="main_form">
+				
+					<form style="position: absolute;top: 0px;left: 130px;" method="POST" action="#">
+						<fieldset>
+						<label style="position: absolute;top:55px;left: 100px;">Name:</label>
+						<input type="text" name="name" placeholder="name" id="input1" style="position: absolute;top:50px;left: 190px;height: 28px;width: 250px;border-color: lightblue;background-color: lightyellow;"><br>
+						<label style="position: absolute;top:95px;left: 100px;">RollNo.:</label>
+						<input type="number" name="rollno" placeholder="roll no." id="input2" style="position: absolute;top:90px;left: 190px;height: 28px;width: 250px;border-color: lightblue;background-color: lightyellow;"><br>
+						<label style="position: absolute;top:135px;left: 100px;">TotalMarks:</label>
+						<input type="number" name="totalmarks" placeholder="total marks" id="input3" style="position: absolute;top:130px;left: 190px;height: 28px;width: 250px;border-color: lightblue;background-color: lightyellow;"><br>
+						<button  type="button" class="btn btn-primary" style="position: absolute;top: 170px;left: 100px;width: 340px;border-radius: 4px;box-shadow: 2px 2px 1px 1px black;" onclick="f1()">Submit</button>
+					</fieldset>
+					</form>
+			</div>
+			<div class="result" id="res">
+				
+			</div>
+		</center>
+	</div>
+	<div class="footer">
+		<center>
+			<h5 style="padding-top: 4px;">copyright@himanshu</h5>
+		</center>
+	</div>
+	<script type="text/javascript">
+		function f1()
+		{
+			var x=document.getElementById("input1").value;
+			var y=document.getElementById("input2").value;
+			var z=document.getElementById("input3").value;
+			var p=document.createElement("P");
+			p.innerHTML="<b>Name:</b>"+x+"&nbsp&nbsp"+"<b>RollNo:</b>"+y+"&nbsp&nbsp"+"<b>TotalMarks:</b>"+z;
+			document.getElementById("res").appendChild(p);
+
+		}
+		
+	</script>
+</body>
+</html>
